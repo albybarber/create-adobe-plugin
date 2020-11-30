@@ -1,0 +1,15 @@
+{
+  "name": "create-adobe-plugin",
+  "version": "1.0.0",
+  "description": "A plugin creator for adobe apps",
+  "main": "index.js",
+  "author": "albybarber",
+  "license": "MIT",
+  "dependencies": {
+    "plop": "^2.7.4"
+  },
+  "scripts": {
+    "make": "plop make",
+    "destroy": "rm -r GeneratedPlugins/"
+  }
+}
