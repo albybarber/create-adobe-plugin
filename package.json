@@ -1,8 +1,11 @@
 {
   "name": "create-adobe-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin creator for adobe apps",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albybarber/create-adobe-plugin.git"
+  },
   "author": "albybarber",
   "license": "MIT",
   "dependencies": {
