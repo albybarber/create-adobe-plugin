@@ -1,6 +1,6 @@
 const os = require('os');
 
-const templatesPath = 'generator/templates/PProPanel/';
+const templatesPath = 'generator/templates/BoilerplateApp/';
 const adobeExtPath = '/Library/Application\ Support/Adobe/CEP/extensions/';
 const templatesPathGlob = `${templatesPath}**`;
 
@@ -9,8 +9,13 @@ const getAdobeExtPath = () => {
     return `${os.userInfo().homedir}${adobeExtPath}{{ pascalCase name }}`;
 };
 
+const getDebugPath = () => {
+    return `${os.userInfo().homedir}${adobeExtPath}{{ pascalCase name }}/.debug`;
+};
+
 module.exports = {
     getAdobeExtPath,
+    getDebugPath,
     templatesPath,
     templatesPathGlob,
-}
+};

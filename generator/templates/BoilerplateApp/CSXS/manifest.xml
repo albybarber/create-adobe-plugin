@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="6.0" ExtensionBundleId="com.testing.it" ExtensionBundleVersion="1.0.0" ExtensionBundleName="Testing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ExtensionManifest Version="6.0" ExtensionBundleId="com.example.{{pascalCase name}}" ExtensionBundleVersion="1.0.0" ExtensionBundleName="{{titleCase name}}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
-		<Extension Id="com.testing.it" Version="1.0" />
+		<Extension Id="com.example.{{pascalCase name}}" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
@@ -16,14 +16,15 @@
 	</ExecutionEnvironment>
 
 	<DispatchInfoList>
-		<Extension Id="com.testing.it">
+		<Extension Id="com.example.{{pascalCase name}}">
 			<DispatchInfo >
 				<Resources>
 					<MainPath>./index.html</MainPath>
-					<ScriptPath>./jsx/Premiere.jsx</ScriptPath>
+					<ScriptPath>./{{pascalCase name}}.jsx</ScriptPath>
 					<CEFCommandLine>
 						<Parameter>--allow-file-access</Parameter>
 						<Parameter>--allow-file-access-from-files</Parameter>
+						<Parameter>--allow-running-insecure-content</Parameter>
 					</CEFCommandLine>
 				</Resources>
 				<Lifecycle>
@@ -31,7 +32,7 @@
 				</Lifecycle>
 				<UI>
 					<Type>Panel</Type>
-					<Menu>Testing</Menu>
+					<Menu>{{pascalCase name}}</Menu>
 					<Geometry>
 						<Size>
 							<Height>300</Height>

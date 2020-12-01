@@ -9,11 +9,14 @@
   "author": "albybarber",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.1.0",
     "os": "^0.1.1",
     "plop": "^2.7.4"
   },
   "scripts": {
     "make": "plop make",
-    "destroy": "rm -r GeneratedPlugins/"
+    "setup:msg": "node ./scripts/setup.js",
+    "setup": "yarn setup:msg && defaults write ~/Library/Preferences/com.adobe.CSXS.10.plist PlayerDebugMode 1",
+    "setup:win": ""
   }
 }
