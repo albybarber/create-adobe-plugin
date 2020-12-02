@@ -1,4 +1,10 @@
-const helpers = require('./generator/helpers.js');
+const {
+    SupportedAdobeProducts,
+    getAdobeExtPath,
+    getDebugPath,
+    getTemplatesPath,
+    getDebugTemplatesPath,
+} = require('./generator/helpers.js');
 
 module.exports = function (plop) {
     plop.setGenerator('make', {
@@ -11,6 +17,12 @@ module.exports = function (plop) {
             },
             {
                 type: 'list',
+                name: 'product',
+                choices: SupportedAdobeProducts,
+                message: 'Which Adobe product are you building a plugin for?'
+            },
+            {
+                type: 'list',
                 name: 'wantDevServer',
                 choices: [ 'yes', 'no'],
                 message: 'Would you like a dev sever set up for you? (localhost:7777)'
@@ -20,16 +32,16 @@ module.exports = function (plop) {
             let actions = [{
                 type: 'addMany',
                 // destination: 'GeneratedPlugins/{{ pascalCase name }}',
-                destination: helpers.getAdobeExtPath(),
-                base: helpers.templatesPath,
-                templateFiles: helpers.templatesPathGlob,
+                destination: getAdobeExtPath(data.name),
+                base: getTemplatesPath(data.product).path,
+                templateFiles: getTemplatesPath(data.product).glob,
             }];
  
             if(data.wantDevServer === 'yes') {
                 actions.push({
                     type: 'add',
-                    path: helpers.getDebugPath(),
-                    templateFile: 'generator/templates/debug.xml'
+                    path: getDebugPath(data.name),
+                    templateFile: getDebugTemplatesPath(data.product)
                 });
             }
  

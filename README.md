@@ -1,6 +1,9 @@
 # create-adobe-plugin
 
-### Installation and usage
+Create Adobe Plugin is an tool that makes it easy to start developing Adobe plugins. It offers a CLI and configuration options to get you started. Currently it supports Adobe Premiere Pro.
+
+
+### Installation and CLI usage
 To install (or update to the latest version):
 
 ```
@@ -18,12 +21,29 @@ create-adobe-plugin--setup - Configures your system for developer mode
 ```
 ### Prerequisites
 * Install the [npm](https://www.npmjs.com/) JS package manager
-* Install [Abobe CC Premiere Pro](https://www.adobe.com/products/premiere.html)
+* Install [Abobe Product](https://www.adobe.com/mt/products/catalog.html)
+
+### Support
+Currently this tool only supports OSX and the Adobe Premiere Pro product.
+
+### Development
+Under the hood the project uses [Yarn](https://yarnpkg.com/), [Plop](https://www.npmjs.com/package/plop) and a little bit of BASH.
+
+#### Available commands
+```
+yarn make - Starts the flow to create an adobe plugin using plop
+yarn setup - Starts the flow to for developer mode using a bin script
+```
 
 ## TODOs
 * Windows support
     * Plugin paths
     * setup for windows 
+* Support for other Adobe products:
+    * 'Illustrator'
+    * 'InDesign'
+    * 'Photoshop'
+
 * Add bundling:
     - The
         [ZXPSignCmd](https://github.com/Adobe-CEP/CEP-Resources/tree/master/ZXPSignCMD/4.0.7)

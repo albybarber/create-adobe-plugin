@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "os": "^0.1.1",
+    "pascalcase": "^1.0.0",
     "plop": "^2.7.4",
     "shelljs": "^0.8.4"
   },

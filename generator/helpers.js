@@ -1,21 +1,39 @@
 const os = require('os');
+const pascalcase = require('pascalcase');
 
-const templatesPath = 'generator/templates/BoilerplateApp/';
 const adobeExtPath = '/Library/Application\ Support/Adobe/CEP/extensions/';
-const templatesPathGlob = `${templatesPath}**`;
+const basePath = 'generator/templates/';
+const SupportedAdobeProducts = [
+    'Adobe Premiere Pro',
+    // 'Illustrator',
+    // 'InDesign',
+    // 'Photoshop'
+];
 
 // Get the full path with os username to where the abobe extensions dir
-const getAdobeExtPath = () => {
-    return `${os.userInfo().homedir}${adobeExtPath}{{ pascalCase name }}`;
+const getAdobeExtPath = (name) => {
+    return `${os.userInfo().homedir}${adobeExtPath}${pascalcase(name)}`;
 };
 
-const getDebugPath = () => {
-    return `${os.userInfo().homedir}${adobeExtPath}{{ pascalCase name }}/.debug`;
+const getDebugPath = (name) => {
+    return `${os.userInfo().homedir}${adobeExtPath}${pascalcase(name)}/.debug`;
+};
+
+const getTemplatesPath = (product) => {
+    let path = `${basePath}${pascalcase(product)}/`;
+    let glob = `${path}**`;
+
+    return { path, glob };
+};
+
+const getDebugTemplatesPath = (product) => {   
+    return `${basePath}${pascalcase(product)}/debug.xml`
 };
 
 module.exports = {
+    SupportedAdobeProducts,
     getAdobeExtPath,
     getDebugPath,
-    templatesPath,
-    templatesPathGlob,
+    getTemplatesPath,
+    getDebugTemplatesPath,
 };
