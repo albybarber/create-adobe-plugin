@@ -1,6 +1,6 @@
 {
   "name": "create-adobe-plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A plugin creator for adobe apps",
   "repository": {
     "type": "git",
