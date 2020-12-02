@@ -1,25 +1,22 @@
 # create-adobe-plugin
 
 ### Installation and usage
-
 To install (or update to the latest version):
 
 ```
-yarn global add create-adobe-plugin
+npm install -g create-adobe-plugin
 ```
 
-> Yarn is a commonly used package manemnet system used to install JavaScript based applications.
+> npm is a commonly used package managment system used to install JavaScript based applications.
 
 #### Available commands
 ```
-plop make - Creates an adobe plugin
-plop setup - Configures your system for developer mode
+create-adobe-plugin - Creates an adobe plugin
+create-adobe-plugin--setup - Configures your system for developer mode
 ```
 ### Prerequisites
-
-* Install the [Yarn](http://) JS package manager
-* Install [Abobe CC Premiere Pro](http://)
-
+* Install the [npm](https://www.npmjs.com/) JS package manager
+* Install [Abobe CC Premiere Pro](https://www.adobe.com/products/premiere.html)
 
 ## TODOs
 * Windows support

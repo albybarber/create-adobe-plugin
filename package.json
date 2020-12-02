@@ -11,12 +11,15 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "os": "^0.1.1",
-    "plop": "^2.7.4"
+    "plop": "^2.7.4",
+    "shelljs": "^0.8.4"
   },
   "scripts": {
     "make": "plop make",
-    "setup:msg": "node ./scripts/setup.js",
-    "setup": "yarn setup:msg && defaults write ~/Library/Preferences/com.adobe.CSXS.10.plist PlayerDebugMode 1",
-    "setup:win": ""
+    "setup": "create-adobe-plugin--setup"
+  },
+  "bin": {
+    "create-adobe-plugin": "./scripts/cli.js",
+    "create-adobe-plugin--setup": "./scripts/setup.js"
   }
 }
