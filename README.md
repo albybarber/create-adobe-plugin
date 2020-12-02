@@ -9,7 +9,7 @@ npm install -g create-adobe-plugin && create-adobe-plugin--setup
 
 > npm is a commonly used package managment system used to install JavaScript based applications.
 
-![](https://assets.codepen.io/18215/cap-cli.gif)
+![cli gif](https://raw.github.com/albybarber/create-adobe-plugin/master/cap-cli.gif)
 
 #### Available commands
 ```
