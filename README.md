@@ -1,6 +1,6 @@
 # create-adobe-plugin
 
-Create Adobe Plugin is an tool that makes it easy to start developing Adobe plugins. It offers a CLI and configuration options to get you started. Currently it supports Adobe Premiere Pro.
+Create Adobe Plugin is an tool that makes it easy to start developing Adobe plugins. It offers a CLI and configuration options to get you started. Currently it supports Adobe Premiere Pro and OSX.
 
 
 ### Installation and CLI usage
@@ -19,12 +19,6 @@ npm install -g create-adobe-plugin && create-adobe-plugin--setup
 create-adobe-plugin - Creates an adobe plugin
 create-adobe-plugin--setup - Configures your system for developer mode
 ```
-### Prerequisites
-* Install the [npm](https://www.npmjs.com/) JS package manager
-* Install [Abobe Product](https://www.adobe.com/mt/products/catalog.html)
-
-### Support
-Currently this tool only supports OSX and the Adobe Premiere Pro product.
 
 ### Development
 Under the hood the project uses [Yarn](https://yarnpkg.com/), [Plop](https://www.npmjs.com/package/plop) and a little bit of BASH.
@@ -35,6 +29,16 @@ yarn make - Starts the flow to create an adobe plugin using plop
 yarn setup - Starts the flow to for developer mode using a bin script
 ```
 
+#### Bolilerplate Apps
+The boilerplate apps are a collection of sample applications although they were not originally written by the developers of this tool, they have been edited to work with the generator. 
+
+* AdobePremierePro: [PProPanel](https://github.com/Adobe-CEP/Samples/tree/master/PProPanel)
+
+
+#### Resources 
+* [Adobe Common Extensibility Platform (CEP)](https://www.adobe.io/apis/creativecloud/cep.html)
+* [Adobe CEP sample extensions](https://github.com/Adobe-CEP/Samples)
+
 ## TODOs
 * Windows support
     * Plugin paths
@@ -43,6 +47,8 @@ yarn setup - Starts the flow to for developer mode using a bin script
     * 'Illustrator'
     * 'InDesign'
     * 'Photoshop'
+
+* Custom plugin prefix  e.g. com.[insert].plugin
 
 * Add bundling:
     - The

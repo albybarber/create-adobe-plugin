@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExtensionManifest Version="6.0" ExtensionBundleId="com.example.{{pascalCase name}}" ExtensionBundleVersion="1.0.0" ExtensionBundleName="{{titleCase name}}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ExtensionManifest Version="6.0" ExtensionBundleId="{{> pluginID}}" ExtensionBundleVersion="1.0.0" ExtensionBundleName="{{titleCase name}}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ExtensionList>
-		<Extension Id="com.example.{{pascalCase name}}" Version="1.0" />
+		<Extension Id="{{> pluginID}}" Version="1.0" />
 	</ExtensionList>
 	<ExecutionEnvironment>
 		<HostList>
@@ -16,7 +16,7 @@
 	</ExecutionEnvironment>
 
 	<DispatchInfoList>
-		<Extension Id="com.example.{{pascalCase name}}">
+		<Extension Id="{{> pluginID}}">
 			<DispatchInfo >
 				<Resources>
 					<MainPath>./index.html</MainPath>

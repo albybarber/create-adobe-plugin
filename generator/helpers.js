@@ -9,14 +9,19 @@ const SupportedAdobeProducts = [
     // 'InDesign',
     // 'Photoshop'
 ];
+const pluginPrefix = 'com.example.'
+
+const makePluginID = (name) => {    
+    return `${pluginPrefix}${pascalcase(name)}`;
+}
 
 // Get the full path with os username to where the abobe extensions dir
 const getAdobeExtPath = (name) => {
-    return `${os.userInfo().homedir}${adobeExtPath}${pascalcase(name)}`;
+    return `${os.userInfo().homedir}${adobeExtPath}${makePluginID(name)}`;
 };
 
 const getDebugPath = (name) => {
-    return `${os.userInfo().homedir}${adobeExtPath}${pascalcase(name)}/.debug`;
+    return `${os.userInfo().homedir}${adobeExtPath}${makePluginID(name)}/.debug`;
 };
 
 const getTemplatesPath = (product) => {
@@ -36,4 +41,5 @@ module.exports = {
     getDebugPath,
     getTemplatesPath,
     getDebugTemplatesPath,
+    makePluginID,
 };

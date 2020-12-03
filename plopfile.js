@@ -4,6 +4,7 @@ const {
     getDebugPath,
     getTemplatesPath,
     getDebugTemplatesPath,
+    makePluginID,
 } = require('./generator/helpers.js');
 
 module.exports = function (plop) {
@@ -29,6 +30,8 @@ module.exports = function (plop) {
             },
         ],
         actions: function(data) {
+            plop.setPartial('pluginID', makePluginID(data.name));
+
             let actions = [{
                 type: 'addMany',
                 // destination: 'GeneratedPlugins/{{ pascalCase name }}',
